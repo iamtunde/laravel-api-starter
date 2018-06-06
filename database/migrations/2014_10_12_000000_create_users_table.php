@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->longText('address', 300);
             $table->string('avatar')->nullable();
             $table->enum('type', ['user', 'admin', 'agency'])->default('user');
+            $table->string('channel')->nullable();
             $table->boolean('isDeleted')->default(false);
             $table->rememberToken();
             $table->timestamps();
